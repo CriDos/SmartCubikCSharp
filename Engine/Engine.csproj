@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseElement.cs" />
+    <Compile Include="Container.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="SceneModel.cs" />
     <Compile Include="Program.cs" />

@@ -2,12 +2,13 @@
 
 namespace SmartCubik.Engine
 {
-    internal class Element : BaseElement
+    internal class Container : BaseElement
     {
+        private readonly List<IElement> _elementList = new List<IElement>();
         private readonly List<IElement> _pointList = new List<IElement>();
         private readonly List<IElement> _propList = new List<IElement>();
 
-        public Element(long id) : base(id)
+        public Container(long id) : base(id)
         {
         }
     }

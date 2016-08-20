@@ -18,7 +18,7 @@ namespace SmartCubik.Engine
 
         public long GenElementId()
         {
-            long lastId = _elements.Count;
+            long lastId = _elements.Count + 1;
 
             while(true)
             {
