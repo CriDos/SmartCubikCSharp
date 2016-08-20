@@ -1,5 +1,5 @@
-﻿using System;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
+using System;
 
 namespace SmartCubik.Engine
 {
@@ -9,7 +9,6 @@ namespace SmartCubik.Engine
         private static void Main()
         {
             var sceneModel = new SceneModel();
-
 
             for(var i = 0L; i < 100; i++)
             {
