@@ -1,10 +1,9 @@
 ﻿namespace SmartCubik.Engine
 {
-    internal interface ISceneProperty
+    internal class SceneProperty : BaseSceneObject
     {
-    }
-
-    internal class SceneProperty : ISceneProperty
-    {
+        public SceneProperty(long id, ISceneObject parentSceneObject = null) : base(id, parentSceneObject)
+        {
+        }
     }
 }
