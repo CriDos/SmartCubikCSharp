@@ -4,7 +4,7 @@ namespace SmartCubik.Engine
 {
     internal class SceneModel
     {
-        private readonly List<Element> _elements = new List<Element> { Capacity = 100000 };
+        private readonly List<IElement> _elements = new List<IElement> { Capacity = 100000 };
 
         public void Add(Element e)
         {

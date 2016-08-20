@@ -15,6 +15,7 @@ namespace SmartCubik.Engine
                 sceneModel.Add(new Element(sceneModel.GenElementId()));
             }
 
+            
             Console.ReadLine();
         }
     }
