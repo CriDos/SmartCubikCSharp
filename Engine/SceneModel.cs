@@ -6,12 +6,12 @@ namespace SmartCubik.Engine
     {
         private readonly List<ISceneObject> _elements = new List<ISceneObject> { Capacity = 100000 };
 
-        public void Add(SceneObject e)
+        public void Add(SceneElement e)
         {
             _elements.Add(e);
         }
 
-        public void Remove(SceneObject e)
+        public void Remove(SceneElement e)
         {
             _elements.Remove(e);
         }

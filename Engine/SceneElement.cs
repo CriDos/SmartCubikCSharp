@@ -2,12 +2,12 @@
 
 namespace SmartCubik.Engine
 {
-    internal class SceneObject : AbstractSceneObject
+    internal class SceneElement : AbstractSceneObject
     {
-        private readonly List<IPoint> _pointList = new List<IPoint>();
-        private readonly List<IProperty> _propertyList = new List<IProperty>();
+        private readonly List<IScenePoint> _pointList = new List<IScenePoint>();
+        private readonly List<ISceneProperty> _propertyList = new List<ISceneProperty>();
 
-        public SceneObject(long id) : base(id)
+        public SceneElement(long id) : base(id)
         {
         }
     }

@@ -1,10 +1,10 @@
 ﻿namespace SmartCubik.Engine
 {
-    internal interface IPoint
+    internal interface IScenePoint
     {
     }
 
-    internal class ScenePoint : IPoint
+    internal class ScenePoint : IScenePoint
     {
     }
 }

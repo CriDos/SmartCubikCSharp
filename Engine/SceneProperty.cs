@@ -1,10 +1,10 @@
 ﻿namespace SmartCubik.Engine
 {
-    internal interface IProperty
+    internal interface ISceneProperty
     {
     }
 
-    internal class SceneProperty : IProperty
+    internal class SceneProperty : ISceneProperty
     {
     }
 }
