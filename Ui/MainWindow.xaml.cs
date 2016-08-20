@@ -25,7 +25,6 @@ namespace Ui
             int test = 13;
             Debug.WriteLine($"test {test:X2}");
             Canvas.SetTop(button1, 1);
-            
         }
     }
 }

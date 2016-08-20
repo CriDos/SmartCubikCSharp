@@ -12,7 +12,7 @@ namespace SmartCubik.Engine
 
             for(var i = 0L; i < 100; i++)
             {
-                sceneModel.Add(new Element(sceneModel.GenElementId()));
+                sceneModel.Add(new SceneObject(sceneModel.GenElementId()));
             }
 
             Console.ReadLine();

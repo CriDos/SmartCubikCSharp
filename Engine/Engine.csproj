@@ -77,9 +77,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseElement.cs" />
-    <Compile Include="Container.cs" />
-    <Compile Include="Element.cs" />
+    <Compile Include="BaseSceneElement.cs" />
+    <Compile Include="SceneContainer.cs" />
+    <Compile Include="SceneElement.cs" />
+    <Compile Include="ScenePoint.cs" />
+    <Compile Include="SceneProperty.cs" />
     <Compile Include="SceneModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

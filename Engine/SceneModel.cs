@@ -4,14 +4,14 @@ namespace SmartCubik.Engine
 {
     internal class SceneModel
     {
-        private readonly List<IElement> _elements = new List<IElement> { Capacity = 100000 };
+        private readonly List<ISceneObject> _elements = new List<ISceneObject> { Capacity = 100000 };
 
-        public void Add(Element e)
+        public void Add(SceneObject e)
         {
             _elements.Add(e);
         }
 
-        public void Remove(Element e)
+        public void Remove(SceneObject e)
         {
             _elements.Remove(e);
         }
