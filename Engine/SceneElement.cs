@@ -7,7 +7,7 @@ namespace SmartCubik.Engine.Model
         private readonly List<ScenePoint> _pointList = new List<ScenePoint>();
         private readonly List<SceneProperty> _propertyList = new List<SceneProperty>();
 
-        public SceneElement(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
+        public SceneElement(long id, SceneObject parent = null) : base(id, parent)
         {
         }
     }

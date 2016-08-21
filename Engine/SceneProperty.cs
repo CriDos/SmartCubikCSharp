@@ -1,8 +1,8 @@
 ﻿namespace SmartCubik.Engine.Model
 {
-    internal class SceneProperty : BaseSceneObject
+    internal class SceneProperty : BaseObject
     {
-        public SceneProperty(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
+        public SceneProperty(long id, SceneObject parent = null) : base(id, parent)
         {
         }
     }
