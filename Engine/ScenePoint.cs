@@ -1,4 +1,4 @@
-﻿namespace SmartCubik.Engine
+﻿namespace SmartCubik.Engine.Model
 {
     internal class ScenePoint : BaseSceneObject
     {

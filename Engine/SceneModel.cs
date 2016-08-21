@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SmartCubik.Engine
+namespace SmartCubik.Engine.Model
 {
     internal class SceneModel
     {
