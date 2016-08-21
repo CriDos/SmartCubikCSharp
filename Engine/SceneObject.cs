@@ -8,36 +8,20 @@ namespace SmartCubik.Engine
     {
     }
 
-    internal interface IBaseSceneObject
-    {
-        long Id { get; }
-        string Name { get; set; }
-        IBaseSceneObject Parent { get; set; }
-    }
-
-    internal abstract class BaseSceneObject : IBaseSceneObject
+    internal abstract class BaseSceneObject
     {
         public long Id { get; }
         public string Name { get; set; }
-        public IBaseSceneObject Parent { get; set; }
+        public BaseSceneObject Parent { get; set; }
 
-        protected BaseSceneObject(long id, [AllowNull]ISceneObject parentSceneObject = null)
+        protected BaseSceneObject(long id, [AllowNull]SceneObject parentSceneObject = null)
         {
             Id = id;
             Parent = parentSceneObject;
         }
     }
 
-    internal interface ISceneObject : IBaseSceneObject
-    {
-        float X { get; set; }
-        float Y { get; set; }
-        int Width { get; set; }
-        int Height { get; set; }
-        ElementFlags Flags { get; set; }
-    }
-
-    internal abstract class SceneObject : BaseSceneObject, ISceneObject
+    internal abstract class SceneObject : BaseSceneObject
     {
         public float X { get; set; }
         public float Y { get; set; }
@@ -45,7 +29,7 @@ namespace SmartCubik.Engine
         public int Height { get; set; }
         public ElementFlags Flags { get; set; }
 
-        protected SceneObject(long id, ISceneObject parentSceneObject = null) : base(id, parentSceneObject)
+        protected SceneObject(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
         {
         }
     }

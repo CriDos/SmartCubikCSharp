@@ -2,7 +2,7 @@
 {
     internal class SceneProperty : BaseSceneObject
     {
-        public SceneProperty(long id, ISceneObject parentSceneObject = null) : base(id, parentSceneObject)
+        public SceneProperty(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
         {
         }
     }
