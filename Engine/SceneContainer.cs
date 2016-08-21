@@ -10,6 +10,7 @@ namespace SmartCubik.Engine
 
         public SceneContainer(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
         {
+
         }
     }
 }

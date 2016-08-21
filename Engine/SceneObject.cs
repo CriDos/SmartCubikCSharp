@@ -4,8 +4,16 @@ using System;
 namespace SmartCubik.Engine
 {
     [Flags]
-    internal enum ElementFlags
+    internal enum SceneObjectFlags
     {
+    }
+
+    internal enum ClassSceneObject
+    {
+        Element,
+        Container,
+        Point,
+        Line
     }
 
     internal abstract class BaseSceneObject
@@ -14,7 +22,7 @@ namespace SmartCubik.Engine
         public string Name { get; set; }
         public BaseSceneObject Parent { get; set; }
 
-        protected BaseSceneObject(long id, [AllowNull]SceneObject parentSceneObject = null)
+        protected BaseSceneObject(long id, [AllowNull]BaseSceneObject parentSceneObject = null)
         {
             Id = id;
             Parent = parentSceneObject;
@@ -27,7 +35,7 @@ namespace SmartCubik.Engine
         public float Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public ElementFlags Flags { get; set; }
+        public SceneObjectFlags Flags { get; set; }
 
         protected SceneObject(long id, SceneObject parentSceneObject = null) : base(id, parentSceneObject)
         {
