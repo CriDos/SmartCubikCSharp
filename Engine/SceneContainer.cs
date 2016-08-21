@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using NullGuard;
 
-namespace SmartCubik.Engine.Model
+namespace SmartCubik.Engine
 {
     internal class SceneContainer : SceneObject
     {
@@ -8,7 +9,7 @@ namespace SmartCubik.Engine.Model
         private readonly List<ScenePoint> _pointList = new List<ScenePoint>();
         private readonly List<SceneProperty> _propertyList = new List<SceneProperty>();
 
-        public SceneContainer(long id, SceneObject parent = null) : base(id, parent)
+        public SceneContainer(long id, [AllowNull]BaseObject parent = null) : base(id, parent)
         {
 
         }

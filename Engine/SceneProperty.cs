@@ -1,8 +1,10 @@
-﻿namespace SmartCubik.Engine.Model
+﻿using NullGuard;
+
+namespace SmartCubik.Engine
 {
     internal class SceneProperty : BaseObject
     {
-        public SceneProperty(long id, SceneObject parent = null) : base(id, parent)
+        public SceneProperty(long id, [AllowNull]BaseObject parent = null) : base(id, parent)
         {
         }
     }

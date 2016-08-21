@@ -1,5 +1,5 @@
 ﻿using JetBrains.Annotations;
-using SmartCubik.Engine.Model;
+using SmartCubik.Engine;
 using System;
 
 namespace SmartCubik.Engine

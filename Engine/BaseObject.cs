@@ -1,6 +1,6 @@
 ﻿using NullGuard;
 
-namespace SmartCubik.Engine.Model
+namespace SmartCubik.Engine
 {
     internal abstract class BaseObject
     {

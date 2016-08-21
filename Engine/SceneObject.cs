@@ -1,6 +1,7 @@
 ﻿using System;
+using NullGuard;
 
-namespace SmartCubik.Engine.Model
+namespace SmartCubik.Engine
 {
     [Flags]
     internal enum SceneObjectFlags
@@ -13,8 +14,9 @@ namespace SmartCubik.Engine.Model
         public float Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public SceneObjectFlags Flags { get; set; }
 
-        protected SceneObject(long id, SceneObject parent = null) : base(id, parent)
+        protected SceneObject(long id, [AllowNull]BaseObject parent = null) : base(id, parent)
         {
         }
     }
