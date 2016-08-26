@@ -79,11 +79,11 @@
   <ItemGroup>
     <Compile Include="BaseObject.cs" />
     <Compile Include="Model\SceneModel.cs" />
-    <Compile Include="SceneObject.cs" />
-    <Compile Include="SceneContainer.cs" />
-    <Compile Include="SceneElement.cs" />
-    <Compile Include="ScenePoint.cs" />
-    <Compile Include="SceneProperty.cs" />
+    <Compile Include="ModelObject.cs" />
+    <Compile Include="ModelContainer.cs" />
+    <Compile Include="ModelElement.cs" />
+    <Compile Include="ModelPoint.cs" />
+    <Compile Include="ModelProperty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

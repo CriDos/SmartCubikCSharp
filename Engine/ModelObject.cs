@@ -8,7 +8,7 @@ namespace SmartCubik.Engine
     {
     }
 
-    internal abstract class SceneObject : BaseObject
+    internal abstract class ModelObject : BaseObject
     {
         public float X { get; set; }
         public float Y { get; set; }
@@ -16,7 +16,7 @@ namespace SmartCubik.Engine
         public int Height { get; set; }
         public SceneObjectFlags Flags { get; set; }
 
-        protected SceneObject(long id, [AllowNull]BaseObject parent = null) : base(id, parent)
+        protected ModelObject(long id, [AllowNull]BaseObject parent = null) : base(id, parent)
         {
         }
     }
