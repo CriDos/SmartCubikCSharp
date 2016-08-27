@@ -4,22 +4,22 @@ namespace SmartCubik.Engine.Model
 {
     internal class Scene
     {
-        private readonly SceneContainer _entryContainer;
+        public SceneContainer Container { get; }
         private readonly List<SceneObject> _objectList = new List<SceneObject>();
 
         public Scene()
         {
-            _entryContainer = new SceneContainer(this);
+            Container = new SceneContainer(this);
         }
 
-        public void Add(SceneContainer sceneObject)
+        public void AddObject(SceneObject sceneObject)
         {
-            _entryContainer.Add(sceneObject);
+            Container.Add(sceneObject);
         }
 
-        public void Remove(SceneContainer sceneObject)
+        public void RemoveObject(SceneObject sceneObject)
         {
-            _entryContainer.Remove(sceneObject);
+            Container.Remove(sceneObject);
         }
 
         public int Count => _objectList.Count;

@@ -11,12 +11,12 @@ namespace SmartCubik.Engine.Model
         private readonly List<SceneProperty> _propertyList = new List<SceneProperty>();
 
         public SceneContainer(long id, Scene scene, [AllowNull]BaseObject parent = null) :
-            base(id, scene, ObjectClass.Container, parent)
+            base(id, scene, parent)
         {
         }
 
         public SceneContainer(Scene scene, [AllowNull]BaseObject parent = null) :
-            base(scene, ObjectClass.Container, parent)
+            base(scene, parent)
         {
         }
 
@@ -51,6 +51,11 @@ namespace SmartCubik.Engine.Model
             }
 
             return false;
+        }
+
+        public void ClearElements()
+        {
+            _elementList.Clear();
         }
 
         public IEnumerator GetEnumerator()
