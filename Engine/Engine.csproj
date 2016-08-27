@@ -77,13 +77,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseObject.cs" />
-    <Compile Include="Model\SceneModel.cs" />
-    <Compile Include="ModelObject.cs" />
-    <Compile Include="ModelContainer.cs" />
-    <Compile Include="ModelElement.cs" />
-    <Compile Include="ModelPoint.cs" />
-    <Compile Include="ModelProperty.cs" />
+    <Compile Include="Model\BaseObject.cs" />
+    <Compile Include="Model\Scene.cs" />
+    <Compile Include="Model\Object.cs" />
+    <Compile Include="Model\Container.cs" />
+    <Compile Include="Model\Element.cs" />
+    <Compile Include="Model\Point.cs" />
+    <Compile Include="Model\Property.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

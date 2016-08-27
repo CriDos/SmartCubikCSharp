@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 
-namespace SmartCubik.Engine
+namespace SmartCubik.Engine.Model
 {
-    internal class SceneModel
+    internal class Scene
     {
-        private readonly List<ModelObject> _elements = new List<ModelObject> { Capacity = 100000 };
+        private readonly List<Object> _elements = new List<Object> { Capacity = 100000 };
 
-        public void Add(ModelElement e)
+        public void Add(Element e)
         {
             _elements.Add(e);
         }
 
-        public void Remove(ModelElement e)
+        public void Remove(Element e)
         {
             _elements.Remove(e);
         }
