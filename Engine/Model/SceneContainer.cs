@@ -36,11 +36,6 @@ namespace SmartCubik.Engine.Model
             return _elementList.Count;
         }
 
-        public int CountOfChildren()
-        {
-            return -1;
-        }
-
         public bool Contains(SceneObject sceneObject)
         {
             return _elementList.Contains(sceneObject);
@@ -59,27 +54,6 @@ namespace SmartCubik.Engine.Model
             return false;
         }
 
-        public bool ContainsOfChildren(long id)
-        {
-            foreach(var sceneObject in _elementList)
-            {
-                if(sceneObject.Id == id)
-                {
-                    return true;
-                }
-
-                if(sceneObject is SceneContainer)
-                {
-                    if((sceneObject as SceneContainer).ContainsOfChildren(id))
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
-
         public void ClearElements()
         {
             _elementList.Clear();
@@ -92,6 +66,5 @@ namespace SmartCubik.Engine.Model
                 yield return sceneObject;
             }
         }
-
     }
 }
