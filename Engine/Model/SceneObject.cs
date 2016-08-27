@@ -18,9 +18,16 @@ namespace SmartCubik.Engine.Model
         public ObjectFlags Flags { get; set; }
         public Scene Scene { get; }
 
-        protected SceneObject(long id, Scene scene, [AllowNull]BaseObject parent = null) : base(parent)
+        protected SceneObject(long id, Scene scene, ObjectClass @class, [AllowNull]BaseObject parent = null) :
+            base(@class, parent)
         {
             Id = id;
+            Scene = scene;
+        }
+        protected SceneObject(Scene scene, ObjectClass @class, [AllowNull]BaseObject parent = null) :
+            base(@class, parent)
+        {
+            Id = scene.GenElementId();
             Scene = scene;
         }
     }

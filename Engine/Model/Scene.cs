@@ -4,37 +4,49 @@ namespace SmartCubik.Engine.Model
 {
     internal class Scene
     {
-        private readonly List<SceneObject> _elements = new List<SceneObject> { Capacity = 100000 };
+        private readonly SceneContainer _entryContainer;
+        private readonly List<SceneObject> _objectList = new List<SceneObject>();
 
-        public void Add(SceneObject sceneObject)
+        public Scene()
         {
-            _elements.Add(sceneObject);
+            _entryContainer = new SceneContainer(this);
         }
 
-        public void Remove(SceneObject sceneObject)
+        public void Add(SceneContainer sceneObject)
         {
-            _elements.Remove(sceneObject);
+            _entryContainer.Add(sceneObject);
+        }
+
+        public void Remove(SceneContainer sceneObject)
+        {
+            _entryContainer.Remove(sceneObject);
+        }
+
+        public int Count()
+        {
+            return _objectList.Count;
+        }
+
+        public bool Contains(long id)
+        {
+            foreach(var obj in _objectList)
+            {
+                if(obj.Id == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public long GenElementId()
         {
-            long lastId = _elements.Count + 1;
+            long lastId = Count() + 1;
 
             while(true)
             {
-                var isFindId = false;
-
-                foreach(var e in _elements)
-                {
-                    if(e.Id == lastId)
-                    {
-                        ++lastId;
-                        isFindId = true;
-                        break;
-                    }
-                }
-
-                if(!isFindId)
+                if(!Contains(lastId))
                     break;
             }
 

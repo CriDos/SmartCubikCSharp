@@ -9,11 +9,11 @@ namespace SmartCubik.Engine.Model
         private readonly List<SceneProperty> _propertyList = new List<SceneProperty>();
 
         public SceneElement(long id, Scene scene, [AllowNull]BaseObject parent = null) :
-            base(id, scene, parent)
+            base(id, scene, ObjectClass.Element, parent)
         {
         }
         public SceneElement(Scene scene, [AllowNull]BaseObject parent = null) :
-            base(scene.GenElementId(), scene, parent)
+            base(scene, ObjectClass.Element, parent)
         {
 
         }
