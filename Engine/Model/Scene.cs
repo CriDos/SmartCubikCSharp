@@ -5,36 +5,25 @@ namespace SmartCubik.Engine.Model
     internal class Scene
     {
         public SceneContainer Container { get; }
-        private List<SceneObject> _allSceneObjects = new List<SceneObject>();
+        public Dictionary<long, SceneObject> Objects { get; } = new Dictionary<long, SceneObject>();
 
         public Scene()
         {
             Container = new SceneContainer(0, this);
         }
 
-        public void _AddObject(SceneObject sceneObject)
-        {
-            _allSceneObjects.Add(sceneObject);
-        }
-
         public long GenElementId()
         {
-            long lastId = _allSceneObjects.Count + 1;
-            var foundId = false;
+            long lastId = Objects.Count + 1;
 
             while(true)
             {
-                foreach(var sceneObject in _allSceneObjects)
+                if(Objects.ContainsKey(lastId))
                 {
-                    if(sceneObject.Id == lastId)
-                    {
-                        foundId = true;
-                        ++lastId;
-                        break;
-                    }
+                    ++lastId;
+                    break;
                 }
-
-                if(!foundId)
+                else
                 {
                     break;
                 }
