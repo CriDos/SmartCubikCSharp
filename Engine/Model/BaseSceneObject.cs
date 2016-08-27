@@ -2,13 +2,13 @@
 
 namespace SmartCubik.Engine.Model
 {
-    internal abstract class BaseObject
+    internal abstract class BaseSceneObject
     {
         public long Id { get; }
-        public BaseObject Parent { get; set; }
+        public BaseSceneObject Parent { get; set; }
         public string Name { get; set; }
 
-        protected BaseObject(long id, [AllowNull]BaseObject parent = null)
+        protected BaseSceneObject(long id, [AllowNull]BaseSceneObject parent = null)
         {
             Id = id;
             Parent = parent;
