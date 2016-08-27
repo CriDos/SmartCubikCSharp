@@ -2,9 +2,9 @@
 
 namespace SmartCubik.Engine.Model
 {
-    internal class ScenePoint : BaseSceneObject
+    internal class ScenePoint : BaseObject
     {
-        public ScenePoint(long id, [AllowNull]BaseSceneObject parent = null) : base(id, parent)
+        public ScenePoint([AllowNull]BaseObject parent = null) : base(parent)
         {
         }
     }

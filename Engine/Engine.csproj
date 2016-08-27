@@ -77,7 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BaseSceneObject.cs" />
+    <Compile Include="Model\BaseObject.cs" />
     <Compile Include="Model\Scene.cs" />
     <Compile Include="Model\SceneObject.cs" />
     <Compile Include="Model\SceneContainer.cs" />

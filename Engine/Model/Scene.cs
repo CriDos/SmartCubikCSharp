@@ -6,14 +6,14 @@ namespace SmartCubik.Engine.Model
     {
         private readonly List<SceneObject> _elements = new List<SceneObject> { Capacity = 100000 };
 
-        public void Add(SceneObject e)
+        public void Add(SceneObject sceneObject)
         {
-            _elements.Add(e);
+            _elements.Add(sceneObject);
         }
 
-        public void Remove(SceneObject e)
+        public void Remove(SceneObject sceneObject)
         {
-            _elements.Remove(e);
+            _elements.Remove(sceneObject);
         }
 
         public long GenElementId()

@@ -8,16 +8,20 @@ namespace SmartCubik.Engine.Model
     {
     }
 
-    internal abstract class SceneObject : BaseSceneObject
+    internal abstract class SceneObject : BaseObject
     {
+        public long Id { get; }
         public float X { get; set; }
         public float Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
         public ObjectFlags Flags { get; set; }
+        public Scene Scene { get; }
 
-        protected SceneObject(long id, [AllowNull]BaseSceneObject parent = null) : base(id, parent)
+        protected SceneObject(long id, Scene scene, [AllowNull]BaseObject parent = null) : base(parent)
         {
+            Id = id;
+            Scene = scene;
         }
     }
 }
