@@ -22,10 +22,7 @@ namespace SmartCubik.Engine.Model
             _entryContainer.Remove(sceneObject);
         }
 
-        public int Count()
-        {
-            return _objectList.Count;
-        }
+        public int Count => _objectList.Count;
 
         public bool Contains(long id)
         {
@@ -42,7 +39,7 @@ namespace SmartCubik.Engine.Model
 
         public long GenElementId()
         {
-            long lastId = Count() + 1;
+            long lastId = Count + 1;
 
             while(true)
             {

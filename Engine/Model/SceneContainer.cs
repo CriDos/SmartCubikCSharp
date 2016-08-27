@@ -22,15 +22,15 @@ namespace SmartCubik.Engine.Model
 
         public void Add(SceneObject sceneObject)
         {
-            //_elements.Add(sceneObject);
+            _elementList.Add(sceneObject);
         }
 
         public void Remove(SceneObject sceneObject)
         {
-            //_elements.Remove(sceneObject);
+            _elementList.Remove(sceneObject);
         }
 
-        public int Count()
+        public int CountElements()
         {
             return _elementList.Count;
         }
