@@ -11,12 +11,15 @@ namespace SmartCubik.Engine
         {
             var sceneModel = new Scene();
 
-            for(int j = 0; j < 100000; j++)
+            for(int j = 0; j < 123; j++)
             {
                 var c = new SceneContainer(sceneModel);
                 c.AddObject(new SceneElement(sceneModel));
                 sceneModel.Container.AddObject(c);
             }
+
+            sceneModel.Container.ClearElements();
+            sceneModel.Objects.Clear();
 
             Console.ReadLine();
         }
