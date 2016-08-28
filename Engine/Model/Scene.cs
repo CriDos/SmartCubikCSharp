@@ -6,7 +6,7 @@ namespace SmartCubik.Engine.Model
     {
         public SceneContainer Container { get; }
         public Dictionary<int, SceneObject> Objects { get; } = new Dictionary<int, SceneObject>();
-        
+
         public Scene()
         {
             Container = new SceneContainer(this);
@@ -21,7 +21,6 @@ namespace SmartCubik.Engine.Model
                 if(Objects.ContainsKey(lastId))
                 {
                     ++lastId;
-                    break;
                 }
                 else
                 {
