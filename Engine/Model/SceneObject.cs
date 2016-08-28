@@ -22,12 +22,14 @@ namespace SmartCubik.Engine.Model
             base(parent)
         {
             Id = id;
+            scene.Objects.Add(Id, this);
             Scene = scene;
         }
         protected SceneObject(Scene scene, [AllowNull]BaseObject parent = null) :
             base(parent)
         {
             Id = scene.GenId();
+            scene.Objects.Add(Id, this);
             Scene = scene;
         }
     }

@@ -23,7 +23,6 @@ namespace SmartCubik.Engine.Model
         public void AddObject(SceneObject sceneObject)
         {
             _elementList.Add(sceneObject);
-            Scene.Objects.Add(sceneObject.Id, sceneObject);
         }
 
         public void RemoveObject(SceneObject sceneObject)

@@ -6,15 +6,15 @@ namespace SmartCubik.Engine.Model
     {
         public SceneContainer Container { get; }
         public Dictionary<int, SceneObject> Objects { get; } = new Dictionary<int, SceneObject>();
-
+        
         public Scene()
         {
-            Container = new SceneContainer(0, this);
+            Container = new SceneContainer(this);
         }
 
         public int GenId()
         {
-            int lastId = Objects.Count + 1;
+            var lastId = Objects.Count;
 
             while(true)
             {

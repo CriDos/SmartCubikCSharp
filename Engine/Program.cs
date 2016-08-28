@@ -1,5 +1,6 @@
 ﻿using JetBrains.Annotations;
 using SmartCubik.Engine.Model;
+using System;
 
 namespace SmartCubik.Engine
 {
@@ -12,10 +13,12 @@ namespace SmartCubik.Engine
 
             for(int j = 0; j < 100000; j++)
             {
-                sceneModel.Container.AddObject(new SceneElement(sceneModel));
+                var c = new SceneContainer(sceneModel);
+                c.AddObject(new SceneElement(sceneModel));
+                sceneModel.Container.AddObject(c);
             }
 
-            //Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
