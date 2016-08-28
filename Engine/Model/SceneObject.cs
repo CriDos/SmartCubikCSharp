@@ -21,7 +21,6 @@ namespace SmartCubik.Engine.Model
         protected SceneObject(int id, Scene scene, [AllowNull]BaseObject parent = null) :
             base(parent)
         {
-            scene.Objects.Add(id, this);
             Id = id;
             Scene = scene;
         }
@@ -29,7 +28,6 @@ namespace SmartCubik.Engine.Model
             base(parent)
         {
             Id = scene.GenId();
-            scene.Objects.Add(Id, this);
             Scene = scene;
         }
 

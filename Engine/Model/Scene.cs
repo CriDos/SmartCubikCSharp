@@ -1,15 +1,29 @@
 ﻿using System.Collections.Generic;
+using NullGuard;
 
 namespace SmartCubik.Engine.Model
 {
     internal class Scene
     {
-        public SceneContainer Container { get; }
-        public Dictionary<int, SceneObject> Objects { get; } = new Dictionary<int, SceneObject>();
+        private readonly List<SceneContainer> _containers = new List<SceneContainer>();
 
         public Scene()
         {
-            Container = new SceneContainer(this);
+
+        }
+
+        public SceneContainer AddContainer(int id, [AllowNull]BaseObject parent = null)
+        {
+            var sceneContainer = new SceneContainer(id, this, parent);
+            _containers.Add(sceneContainer);
+            return sceneContainer;
+        }
+
+        public SceneContainer AddContainer([AllowNull]BaseObject parent = null)
+        {
+            var sceneContainer = new SceneContainer(this, parent);
+            _containers.Add(sceneContainer);
+            return sceneContainer;
         }
 
         public int GenId()
