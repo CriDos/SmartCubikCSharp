@@ -26,13 +26,36 @@ namespace SmartCubik.Engine.Model
             return sceneContainer;
         }
 
+        public int Count()
+        {
+            var sum = 0;
+            foreach(var o in _containers)
+            {
+                sum += o.Count();
+            }
+            return 0;
+        }
+
+        public bool Contains(long id)
+        {
+            foreach(var o in _containers)
+            {
+                if(o.Id == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public int GenId()
         {
-            var lastId = Objects.Count;
+            var lastId = Count();
 
             while(true)
             {
-                if(Objects.ContainsKey(lastId))
+                if(Contains(lastId))
                 {
                     ++lastId;
                 }
