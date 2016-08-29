@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SmartCubik.Engine.Model
 {
-    internal class SceneContainer : SceneObject
+    internal class SceneContainer : SceneObject, IEnumerable
     {
         private readonly List<SceneObject> _elementList = new List<SceneObject>();
         private readonly List<ScenePoint> _pointList = new List<ScenePoint>();
@@ -20,18 +20,14 @@ namespace SmartCubik.Engine.Model
         {
         }
 
-        public SceneElement AddElement(int id, SceneContainer parent)
+        public void AddObject(SceneObject sceneObject)
         {
-            var sceneObject = new SceneElement(id, Scene, parent);
             _elementList.Add(sceneObject);
-            return sceneObject;
         }
 
-        public SceneElement AddElement(SceneContainer parent)
+        public void RemoveObject(SceneObject sceneObject)
         {
-            var sceneObject = new SceneElement(Scene, parent);
-            _elementList.Add(sceneObject);
-            return sceneObject;
+            _elementList.Remove(sceneObject);
         }
 
         public int Count()
@@ -55,6 +51,19 @@ namespace SmartCubik.Engine.Model
             }
 
             return false;
+        }
+
+        public void ClearElements()
+        {
+            _elementList.Clear();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            foreach(var sceneObject in _elementList)
+            {
+                yield return sceneObject;
+            }
         }
     }
 }
